@@ -1,0 +1,39 @@
+getAllProductsBasedOnLocation(LocationId)
+-StoreId(Himanshu Cannabis) - if storeId passed then gives all the products of all stores. 
+-LocationId(Himanshu Cannabis-Brampton)-ABC($10) - If locationId passed then gives all the products on this store on this location with prices of this location.
+-LocationId(Himanshu Cannabis-Scarborough)-ABC($11) - If locationId passed then gives all the products on this store on this location with prices of this location.
+{
+    CatalogItemId: "asdasldjksakdj=-asdasdsadsa",
+    .....
+}
+Response:
+RegularPrice
+InventoryCount
+
+------------------------------------------------------
+CatalogItemIdsArray = [];
+
+bulkCatalogDetailApi (POST)
+body : {
+    ["asdasdasd", "asdasdasd2",.....] 
+}
+Name = "THC Organic"
+ShortDescription 
+LongDescription
+
+[]
+
+Assets: {Photos}
+
+------------------------------------------------------
+
+Final Dataset
+
+RegularPrice
+InventoryCount
+CatalogItemId
+Assets: {Photos}
+Name = "THC Organic"
+ShortDescription 
+LongDescription
+Category

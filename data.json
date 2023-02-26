@@ -1,0 +1,82 @@
+[
+    {
+        "Name": "Product Name 1",
+        "ShortDescription": "short description organic 1",
+        "LongDescription": "long description organic",
+        "RegularPrice": 11.99,
+        "InventoryCount": 2,
+        "CatalogItemId": "asldkhjaslkdjaskj1",
+        "Weight": "1g",
+        "Unit": "g",
+        "Assets": [
+            {
+                "Uri": "https://placeholder.com/assets/images/150x150-2-500x500.png"
+            }
+        ],
+        "Category": "Flower"
+    },
+    {
+        "Name": "Product Name 2",
+        "ShortDescription": "short description",
+        "LongDescription": "long description organic",
+        "RegularPrice": 1111.99,
+        "InventoryCount": 2,
+        "CatalogItemId": "asldkhjaslkdjaskj2",
+        "Weight": "1/2g",
+        "Unit": "g",
+        "Assets": [
+            {
+                "Uri": "https://placeholder.com/assets/images/150x150-2-500x500.png"
+            }
+        ],
+        "Category": "Accessories"
+    },
+    {
+        "Name": "Product Name 3",
+        "ShortDescription": "short description ",
+        "LongDescription": "long description",
+        "RegularPrice": 13.99,
+        "InventoryCount": 2,
+        "Weight": "2g",
+        "Unit": "g",
+        "CatalogItemId": "asldkhjaslkdjaskj3",
+        "Assets": [
+            {
+                "Uri": "https://placeholder.com/assets/images/150x150-2-500x500.png"
+            }
+        ],
+        "Category": "Vape"
+    },
+    {
+        "Name": "Product Name 4 ORGANIC",
+        "ShortDescription": "short description ",
+        "LongDescription": "long description",
+        "RegularPrice": 15.99,
+        "InventoryCount": 2,
+        "Weight": "1g",
+        "Unit": "g",
+        "CatalogItemId": "asldkhjaslkdjaskj4",
+        "Assets": [
+            {
+                "Uri": "https://placeholder.com/assets/images/150x150-2-500x500.png"
+            }
+        ],
+        "Category": "Pre-Roll"
+    },
+    {
+        "Name": "Product Name 5",
+        "ShortDescription": "short description",
+        "LongDescription": "long description organic",
+        "RegularPrice": 48.99,
+        "InventoryCount": 2,
+        "CatalogItemId": "asldkhjaslkdjaskj2",
+        "Weight": "1/2g",
+        "Unit": "g",
+        "Assets": [
+            {
+                "Uri": "https://placeholder.com/assets/images/150x150-2-500x500.png"
+            }
+        ],
+        "Category": "Accessories"
+    }
+]

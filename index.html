@@ -1,34 +1,330 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    
-    <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css"
+        integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
 </head>
+
 <body>
     <div class="container">
-        <div class="row">
-            <div class="col-md-4">
-                Gold Gold
+        <div class="row" style="margin-top:25px">
+            <div class="col-md-12">
+                <h3>Store name</h3>
             </div>
-            <div class="col-md-4">
-                Gold Gold
+            <div class="col-md-3">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h4 id="aljkshdsaklj">Category <button id="resetBtn" class="btn btn-light btn-sm">Reset</button>
+                        </h4>
+                    </div>
+                    <div class="col-md-12 form-control">
+                        <input type="checkbox" name="category" class="category" value="Flower" /> Flower
+                    </div>
+                    <div class="col-md-12 form-control">
+                        <input type="checkbox" name="category" class="category" value="Vape" /> Vape
+                    </div>
+                    <div class="col-md-12 form-control">
+                        <input type="checkbox" name="category" class="category" value="Pre-Roll" /> Pre-Roll
+                    </div>
+                    <div class="col-md-12 form-control">
+                        <input type="checkbox" name="category" class="category" value="Accessories" /> Accessories
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <h4>Weight</h4>
+                    </div>
+                    <div class="col-md-12 form-control">
+                        <input type="checkbox" name="weight" class="weight" value="1g" /> 1g
+                    </div>
+                    <div class="col-md-12 form-control">
+                        <input type="checkbox" name="weight" class="weight" value="1/2g" /> 1/2g
+                    </div>
+                    <div class="col-md-12 form-control">
+                        <input type="checkbox" name="weight" class="weight" value="1/8g" /> 1/8g
+                    </div>
+                    <div class="col-md-12 form-control">
+                        <input type="checkbox" name="weight" class="weight" value="2g" /> 2g
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <h4>Price Range</h4>
+                    </div>
+                    <div class="col-md-12 form-control">
+                        <input type="radio" name="priceRange" class="priceRange" min="0" max="10"
+                            value="$0-$10" /> $0-$10
+                    </div>
+                    <div class="col-md-12 form-control">
+                        <input type="radio" name="priceRange" class="priceRange" min="10" max="20"
+                            value="$10-$20" /> $10-$20
+                    </div>
+                    <div class="col-md-12 form-control">
+                        <input type="radio" name="priceRange" class="priceRange" min="20" max="30"
+                            value="$20-$30" /> $20-$30
+                    </div>
+                    <div class="col-md-12 form-control">
+                        <input type="radio" name="priceRange" class="priceRange" min="30" max="1000" value=">$30" /> Above $30
+                    </div>
+                </div>
             </div>
-            <div class="col-md-4">
-                Gold Gold
+            <div class="col-md-9" id="showProducts">
+                <div class="row" style="margin-top:25px">
+                    <div class="col-md-12" id="filterBox">
+
+                    </div>
+                </div>
+                <div class="row" style="margin-top:25px" id="showResults">
+
+                </div>
             </div>
         </div>
     </div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            $('#resetBtn').on('click', function () {
+                window.location.reload()
+            });
+            $.get("/data.json", function (data) {
+                
+                localStorage.setItem('data', JSON.stringify(data));
+                let allProducts = JSON.parse(localStorage.getItem('data'));
+                $('#showResults').html(getHtml(allProducts));
+                startOneMinuteFetch();
+            });
+            function startOneMinuteFetch() {
+                setInterval(function () {
+                    $.get("/data.json", function (data) {
+                        localStorage.setItem('data', JSON.stringify(data));
+                    });
+                    console.log('time');
+                }, 20000);
+            }
+
+            function filterProducts(filterMe, categorySearchArray, weightSearchArray, priceRangeSearchArray) {
+                let data = JSON.parse(localStorage.getItem('data'));
+                let result = $(data).filter(function (i, n) {
+                    
+                    if (
+                        categorySearchArray.length > 0
+                        && weightSearchArray.length > 0
+                        && priceRangeSearchArray.length > 0
+                    ) {
+                        //triple
+                        if (
+                            $.inArray(n.Category, categorySearchArray) !== -1
+                            && $.inArray(n.Weight, weightSearchArray) !== -1
+                            && n.RegularPrice >= priceRangeSearchArray[0]
+                            && n.RegularPrice <= priceRangeSearchArray[1]
+                        ) {
+                            return true;
+                        }
+                    } else if (
+                        categorySearchArray.length > 0
+                        && weightSearchArray.length > 0
+                        && priceRangeSearchArray.length == 0
+                    ) {
+                        //double
+                        if ($.inArray(n.Category, categorySearchArray) !== -1
+                            && $.inArray(n.Weight, weightSearchArray) !== -1) {
+                            return true;
+                        }
+                    } else if (
+                        categorySearchArray.length > 0
+                        && weightSearchArray.length == 0
+                        && priceRangeSearchArray.length > 0
+                    ) {
+                        //double
+                        if ($.inArray(n.Category, categorySearchArray) !== -1
+                            && n.RegularPrice >= priceRangeSearchArray[0] && n.RegularPrice <= priceRangeSearchArray[1]) {
+                            return true;
+                        }
+                    } else if (
+                        categorySearchArray.length == 0
+                        && weightSearchArray.length > 0
+                        && priceRangeSearchArray.length > 0
+                    ) {
+                        //double
+                        if ($.inArray(n.Weight, weightSearchArray) !== -1
+                            && n.RegularPrice >= priceRangeSearchArray[0] && n.RegularPrice <= priceRangeSearchArray[1]) {
+                            return true;
+                        }
+                    } else if (
+                        categorySearchArray.length > 0
+                        && weightSearchArray.length == 0
+                        && priceRangeSearchArray.length == 0
+                    ) {
+                        //single
+                        if ($.inArray(n.Category, categorySearchArray) !== -1) {
+                            return true;
+                        }
+                    } else if (
+                        categorySearchArray.length == 0
+                        && weightSearchArray.length > 0
+                        && priceRangeSearchArray.length == 0
+                    ) {
+                        //single
+                        if ($.inArray(n.Weight, weightSearchArray) !== -1) {
+                            return true;
+                        }
+                    } else if (
+                        categorySearchArray.length == 0
+                        && weightSearchArray.length == 0
+                        && priceRangeSearchArray.length > 0
+                    ) {
+                        //single
+                        if (n.RegularPrice >= priceRangeSearchArray[0] && n.RegularPrice <= priceRangeSearchArray[1]) {
+                            return true;
+                        }
+                    }
+                });
+                
+                return result;
+            }
+
+            function getHtml(results) {
+                let html = ``;
+                if (results.length == 0) {
+                    html = `<div class="col-md-12"  style="padding:35px;border: 2px dotted red;padding: 1px">No results found.</div>`;
+                }
+                $.each(results, function (i, value) {
+                    html += `<div class="col-md-3" style="border: 1px solid red;padding: 1px">
+                        <img src="${value.Assets[0].Uri}" height="180px"
+                            width="180px" alt="placeholder" />
+                        <p>Name: ${value.Name}</p>
+                        <p>Price: $${value.RegularPrice}</p>
+                        <p>Category: ${value.Category}</p>
+                    </div>`;
+                });
+
+                
+                return html;
+            }
+
+            let filterBox = '';
+            let categorySearchArray = [];
+            let weightSearchArray = [];
+            let priceRangeSearchArray = [];
+            let categoryFilterText = '';
+            let weightFilterText = '';
+            let priceRangeFilterText = '';
+            let filterMe = {
+                "Category": [],
+                "Weight": [],
+                "PriceRange": [],
+            };
+            $('.category').on('click', function () {
+                let thisOne = $(this);
+                let w = '';
+                $.each(weightSearchArray, function (index, value) {
+                    w += " " + '<span style="border:1px dotted red; padding: 12px">Weight: ' + value + '</span>' + " "
+                });
+                weightFilterText = w;
+                priceRangeFilterText = $("input[name='priceRange']:checked").val() ? '<span style="border:1px dotted red; padding: 12px">Price: ' + $("input[name='priceRange']:checked").val() + '</span>' : '';
+
+                //check if current value exists in categorySearchArray
+                if (categorySearchArray.indexOf(thisOne.val()) === -1) {
+                    categorySearchArray.push(thisOne.val());
+                } else {
+                    categorySearchArray.splice($.inArray(thisOne.val(), categorySearchArray), 1);
+                }
+                filterMe = {
+                    ...filterMe,
+                    "Category": categorySearchArray
+                }
+                let results = filterProducts(filterMe, categorySearchArray, weightSearchArray, priceRangeSearchArray);
+                let html = getHtml(results);
+                $('#showResults').html(html);
+                let c = '';
+                $.each(categorySearchArray, function (index, value) {
+                    c += " " + '<span style="border:1px dotted red; padding: 12px">Category: ' + value + '</span>' + " "
+                });
+                categoryFilterText = c;
+                let mergedText = categoryFilterText + " " + weightFilterText + " " + priceRangeFilterText;
+                $('#filterBox').html(mergedText);
+            });
+
+
+            $('.weight').on('click', function () {
+                let thisOne = $(this);
+                
+                let c = '';
+                $.each(categorySearchArray, function (index, value) {
+                    c += " " + '<span style="border:1px dotted red; padding: 12px">Category: ' + value + '</span>' + " "
+                });
+                categoryFilterText = c;
+                priceRangeFilterText = $("input[name='priceRange']:checked").val() ? '<span style="border:1px dotted red; padding: 12px">Price: ' + $("input[name='priceRange']:checked").val() + '</span>' : '';
+
+                if (weightSearchArray.indexOf(thisOne.val()) === -1) {
+                    weightSearchArray.push(thisOne.val());
+                } else {
+                    weightSearchArray.splice($.inArray(thisOne.val(), weightSearchArray), 1);
+                }
+                filterMe = {
+                    ...filterMe,
+                    "Weight": weightSearchArray
+                }
+                let results = filterProducts(filterMe, categorySearchArray, weightSearchArray, priceRangeSearchArray);
+                let html = getHtml(results);
+                $('#showResults').html(html);
+                let w = '';
+                $.each(weightSearchArray, function (index, value) {
+                    w += " " + '<span style="border:1px dotted red; padding: 12px">Weight: ' + value + '</span>' + " "
+                });
+                weightFilterText = w;
+                let mergedText = categoryFilterText + " " + weightFilterText + " " + priceRangeFilterText;
+                $('#filterBox').html(mergedText);
+            });
+
+
+            $('.priceRange').on('click', function () {
+                let thisOne = $(this);
+                console.log(thisOne.is(":checked"));
+                let minValue = thisOne.attr('min');
+                let maxValue = thisOne.attr('max');
+                
+                let c = '';
+                $.each(categorySearchArray, function (index, value) {
+                    c += " " + '<span style="border:1px dotted red; padding: 12px">Category: ' + value + '</span>' + " "
+                });
+                categoryFilterText = c;
+                let w = '';
+                $.each(weightSearchArray, function (index, value) {
+                    w += " " + '<span style="border:1px dotted red; padding: 12px">Weight: ' + value + '</span>' + " "
+                });
+                weightFilterText = w;
+                priceRangeFilterText = $("input[name='priceRange']:checked").val() ? '<span style="border:1px dotted red; padding: 12px">Price: ' + $("input[name='priceRange']:checked").val() + '</span>' : '';
+                let mergedText = categoryFilterText + " " + weightFilterText + " " + priceRangeFilterText;
+                $('#filterBox').html(mergedText);
+                priceRangeSearchArray[0] = minValue;
+                priceRangeSearchArray[1] = maxValue;
+                filterMe = {
+                    ...filterMe,
+                    "PriceRange": priceRangeSearchArray
+                }
+                let results = filterProducts(filterMe, categorySearchArray, weightSearchArray, priceRangeSearchArray);
+                let html = getHtml(results);
+                $('#showResults').html(html);
+            });
+        });
+    </script>
 </body>
+
 </html>
